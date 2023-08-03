@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100vh;
+      width: 100%;
+      background: #ff00003d;
+      /*
+      background color without opacity
+      background: #ff0000;
+      */
+    }
+    .gallery {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .main-img .display-img {
+      height: 500px;
+      width: 517px;
+      background-color: aliceblue;
+      object-fit: cover;
+    }
+    .alt-img {
+      height: 100px;
+      width: 100px;
+      background-color: aliceblue;
+      object-fit: cover;
+    }
+    .pick-img {
+      position: relative;
+    }
+    span {
+      cursor: pointer;
+      border-radius: 40%;
+      padding: 5px;
+    }
+    span:hover {
+      background-color: rgb(238, 238, 238);
+    }
+    .left {
+      position: absolute;
+      left: -3rem;
+      top: 50px;
+      transform: translateY(-50%);
+    }
+    .right {
+      position: absolute;
+      right: -3rem;
+      top: 50px;
+      transform: translateY(-50%);
+    }
+    .active {
+      outline: 2px solid rgba(255, 0, 0, 0.521);
+      transition: opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .opacity {
+      opacity: 0.4;
+    }
+    .text {
+      font-weight: 100;
+      padding-top: 6rem;
+      text-transform: uppercase;
+      color: #800000bd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .text-alt {
+      font-weight: bold;
+      display: inline-block;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+    }
+    /* opacity animation for display image */
+    .ani-0 {
+      animation: display-img-animation1 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .ani-1 {
+      animation: display-img-animation2 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .ani-2 {
+      animation: display-img-animation3 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .ani-3 {
+      animation: display-img-animation4 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    .ani-4 {
+      animation: display-img-animation5 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+    @keyframes display-img-animation1 {
+      /* 
+      transform: scale(0);
+      transform: scale(1);
+      */
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+        /* transform: rotate(0deg); */
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+        /* transform: rotate(360deg); */
+      }
+    }
+    @keyframes display-img-animation2 {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes display-img-animation3 {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes display-img-animation4 {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    @keyframes display-img-animation5 {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /*
+    <span class="left" style="font-size: 2rem">&#8592;</span>
+    <span class="right" style="font-size: 2rem">&#8594;</span>
+    */
+  </style>
+  <body>
+    <h1 class="text">Flow<span class="text-alt">ers</span></h1>
+    <div class="gallery">
+      <div class="pick-img">
+        <span class="left" style="font-size: 2rem">&#8592;</span>
+        <span class="right" style="font-size: 2rem">&#8594;</span>
+        <img src="/flowers/flower-1.jpg" alt="" class="alt-img active" />
+        <img src="/flowers/flower-2.jpg" alt="" class="alt-img" />
+        <img src="/flowers/flower-3.jpg" alt="" class="alt-img" />
+        <img src="/flowers/flower-4.jpg" alt="" class="alt-img" />
+        <img src="/flowers/flower-5.jpg" alt="" class="alt-img" />
+      </div>
+      <div class="main-img">
+        <img src="/flowers/flower-1.jpg" alt="" class="display-img" />
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
