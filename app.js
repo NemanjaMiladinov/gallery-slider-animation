@@ -28,13 +28,13 @@ right.addEventListener("click", function (e) {
     // Logic for changing active class
     if (count >= altImgs.length) {
       count = 0;
-      displayImage.src = `./flowers/flower-${count}.jpg`;
+      displayImage.src = `flowers/flower-${count}.jpg`;
       displayImage.classList.remove("ani-4");
     } else {
       altImgs[i].classList.remove("active");
       altImgs[count].classList.add("active");
       // Display main image
-      displayImage.src = `./flowers/flower-${[count + 1]}.jpg`;
+      displayImage.src = `flowers/flower-${[count + 1]}.jpg`;
       // Logic for changing animation classes
       displayImage.classList.remove(`ani-${count - 1}`);
       displayImage.classList.add(`ani-${count}`);
@@ -54,7 +54,7 @@ left.addEventListener("click", function () {
       altImgs[i].classList.remove("active");
       altImgs[count].classList.add("active");
       // Display main image
-      displayImage.src = `./flowers/flower-${[count + 1]}.jpg`;
+      displayImage.src = `flowers/flower-${[count + 1]}.jpg`;
     }
   }
   /*Function for adding and removing opacity css-class*/
